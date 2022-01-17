@@ -10,4 +10,8 @@ executable("main") {
   ]
 }
 
-
+group("tools") {
+  deps = [
+    ":main",
+  ]
+}

@@ -6,5 +6,9 @@ using namespace std;
 #include <vector>
 #include <string>
 
-const char* GetStaticText();
-vector<string> split(string s, string seprate);
+const char *GetStaticText();
+namespace tools
+{
+    vector<string> split(string s, string seprate);
+    string join(vector<string> arr, string seprate);
+}

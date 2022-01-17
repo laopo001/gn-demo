@@ -14,21 +14,39 @@ const char *GetStaticText()
   return "Hello World";
 }
 
-vector<string> split(string s, string seprate)
+namespace tools
 {
-  vector<string> result;
-  int seprate_len = seprate.length();
-  int start = 0;
-  int index;
-  while ((index = s.find(seprate, start)) != string::npos)
+
+  vector<string> split(string s, string seprate)
   {
-    result.push_back(s.substr(start, index - start));
-    start = index + seprate_len;
-    // cout << "1" << endl;
+    vector<string> result;
+    int seprate_len = seprate.length();
+    int start = 0;
+    int index;
+    while ((index = s.find(seprate, start)) != string::npos)
+    {
+      result.push_back(s.substr(start, index - start));
+      start = index + seprate_len;
+      // cout << "1" << endl;
+    }
+    if (start <= s.length())
+    {
+      result.push_back(s.substr(start, s.length() - start));
+    }
+    return result;
   }
-  if (start <= s.length())
+
+  string join(vector<string> arr, string seprate)
   {
-    result.push_back(s.substr(start, s.length() - start));
+    if (arr.size() == 0)
+    {
+      return "";
+    }
+    string s = arr[0];
+    for (size_t i = 1; i < arr.size(); i++)
+    {
+      s += seprate + arr[i];
+    }
+    return s;
   }
-  return result;
 }
