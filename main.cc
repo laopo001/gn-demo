@@ -7,13 +7,13 @@ using namespace std;
 
 int main()
 {
-    vector<string> arr = tools::split("hllo", "ll");
+    vector<string> arr = hello::split("hllo", "ll");
     for (size_t i = 0; i < arr.size(); i++)
     {
         cout << arr[i] << endl;
     }
-    auto s = tools::join(arr, ",");
+    auto s = hello::join(arr, ",");
     cout << s << endl;
-    // cout << GetStaticText() << endl;
+    cout << ("GetStaticText()xxx") << endl;
     return 0;
 }

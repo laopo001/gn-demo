@@ -7,7 +7,7 @@ using namespace std;
 #include <string>
 
 const char *GetStaticText();
-namespace tools
+namespace hello
 {
     vector<string> split(string s, string seprate);
     string join(vector<string> arr, string seprate);

@@ -14,7 +14,7 @@ const char *GetStaticText()
   return "Hello World";
 }
 
-namespace tools
+namespace hello
 {
 
   vector<string> split(string s, string seprate)

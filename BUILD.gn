@@ -6,12 +6,12 @@ executable("main") {
   sources = [ "main.cc" ]
 
   deps = [
-    "//hello/:hello_lib"
+    ":hello_group"
   ]
 }
 
-group("tools") {
+group("hello_group") {
   deps = [
-    ":main",
+    "//hello/:hello_lib",
   ]
 }
