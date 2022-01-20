@@ -1,8 +1,10 @@
+// #define SION_DISABLE_SSL
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include "hello/lib.h"
-
+#include "sion/sion.h"
 using namespace std;
 
 int main()
@@ -14,6 +16,11 @@ int main()
     }
     auto s = hello::join(arr, ",");
     cout << s << endl;
+
+    auto resp = sion::Fetch("https://www.baidu.com/");
+    cout << resp.Body() << endl;
+    cout << resp.HeaderValue("content-type") << endl;
     cout << ("GetStaticText()xxx") << endl;
+
     return 0;
 }

@@ -16,6 +16,8 @@ config("executable_ldconfig") {
     ldflags = [
       "-Wl,-rpath=\$ORIGIN/",
       "-Wl,-rpath-link=",
+      # "-L/usr/local/openssl/lib -lssl -lcrypto",
+      # "-L/usr/lib -lssl -lcrypto",
     ]
   }
 }

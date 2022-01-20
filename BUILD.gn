@@ -4,14 +4,19 @@
 
 executable("main") {
   sources = [ "main.cc" ]
+  # lib_dirs = [ "/usr/lib" ]
+  # libs = [ "ssl", "crypto" ]
 
-  deps = [
-    ":hello_group"
-  ]
-}
-
-group("hello_group") {
+  # include_dirs = ["/usr/include/openssl"]
   deps = [
     "//hello/:hello_lib",
+    "//sion/:sion_lib",
   ]
 }
+
+# group("hello_group") {
+#   deps = [
+#     "//hello/:hello_lib",
+#   ]
+# }
+

@@ -1,0 +1,8 @@
+static_library("sion_lib") {
+  lib_dirs = [ "/usr/lib" ]
+  libs = [
+    "ssl",
+    "crypto",
+  ]
+  sources = [ "sion.h" ]
+}
